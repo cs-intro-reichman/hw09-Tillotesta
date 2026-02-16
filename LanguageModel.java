@@ -98,7 +98,7 @@ public class LanguageModel {
         }
         String newText = initialText;
 
-        while (newText.length() < textLength) {
+        while (newText.length() < textLength + initialText.length()) {
             String window = newText.substring(newText.length() - windowLength);
             List probs = CharDataMap.get(window);
 
